@@ -1,0 +1,10 @@
+
+.gwt-DecoratorPanel {
+	position: absolute;
+	width: 250px;
+	height: 100px;
+	top: 50%;
+	left: 50%;
+	margin-top: -105px;
+	margin-left: -125px;
+}

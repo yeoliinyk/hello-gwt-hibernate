@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE web-app
+    PUBLIC "-//Sun Microsystems, Inc.//DTD Web Application 2.3//EN"
+    "http://java.sun.com/dtd/web-app_2_3.dtd">
+
+<web-app>
+
+	<listener>
+		<listener-class>
+			com.yevgenoliinykov.HelloGWTHibernate.server.services.DbStartUpInitService
+		</listener-class>
+	</listener>
+
+	<servlet>
+		<servlet-name>logInService</servlet-name>
+		<servlet-class>com.yevgenoliinykov.HelloGWTHibernate.server.services.LogInServiceImpl</servlet-class>
+	</servlet>
+
+	<servlet>
+		<servlet-name>remoteLoggingServlet</servlet-name>
+		<servlet-class>com.yevgenoliinykov.HelloGWTHibernate.server.services.GwtRemoteLogging</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>logInService</servlet-name>
+		<url-pattern>/HelloGWTHibernate/login</url-pattern>
+	</servlet-mapping>
+
+	<servlet-mapping>
+		<servlet-name>remoteLoggingServlet</servlet-name>
+		<url-pattern>/HelloGWTHibernate/remote_logging</url-pattern>
+	</servlet-mapping>
+
+	<!-- Default page to serve -->
+	<welcome-file-list>
+		<welcome-file>HelloGWTHibernate.html</welcome-file>
+	</welcome-file-list>
+
+</web-app>

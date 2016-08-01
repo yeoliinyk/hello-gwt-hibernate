@@ -1,0 +1,48 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder"
+	xmlns:g="urn:import:com.google.gwt.user.client.ui">
+	<ui:with field='res'
+		type='com.yevgenoliinykov.HelloGWTHibernate.client.resources.AppResources' />
+	<ui:style>
+	.header {
+		border-bottom: 3px solid;
+		text-align: left;
+	}
+	
+	.footerStyle {
+		font-size: 1em;
+		font-weight: bold;
+		line-height: 2em;
+		border-top: 3px solid;
+		text-align: center;
+	}
+	
+	.logoStyle {
+		height: 100px;
+	}
+	
+	<!--
+	.displayFlex {--><!--
+		display: flex; --> <!--
+		justify-content: center;
+		-->
+		<!--
+	}
+	-->
+	</ui:style>
+	<g:DockLayoutPanel unit='PX'>
+		<g:north size="110">
+			<g:FlowPanel styleName="{style.header}">
+				<g:Image resource='{res.logo}' styleName="{style.logoStyle}" />
+			</g:FlowPanel>
+		</g:north>
+		<g:center>
+			<g:SimplePanel ui:field="mainPanel" />
+		</g:center>
+		<g:south size="30">
+			<g:FlowPanel styleName="{style.footerStyle}">
+				<g:Label>&copy; 2015 Ardas</g:Label>
+			</g:FlowPanel>
+		</g:south>
+	</g:DockLayoutPanel>
+</ui:UiBinder> 
